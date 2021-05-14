@@ -30,7 +30,15 @@
 	# How does a for loop iterate through a string?
 
 def one(input):
-	return ""
+	j = len(input)
+	i = 0 
+	res=[]
+	while i<j:
+		res.append(input[i]*3)
+		i = i+1
+	result ="".join(res)
+	print(result)
+
 
 	# <QUESTION 2>
 
@@ -48,7 +56,14 @@ def one(input):
 	# Use your CLI to access the Python documentation and get help manipulating strings - help(range).
 
 def two(input):
-    return False
+	if input > 1:
+		for i in range(2,input):
+			if (input % i) == 0:
+				return False
+				break
+		else:
+			return True
+	return False
 
 	# <QUESTION 3>
 
@@ -65,7 +80,12 @@ def two(input):
 	# What happens if you multiply a string by a number?
 
 def three(a):
-	return 1
+	x = int(a)
+	xx = int(a,a)
+	xxx = int(a,a,a)
+	xxxx = int(a,a,a,a)
+	ans = x + xx + xxx + xxxx
+	return ans
 
 	# <QUESTION 4>
 
@@ -111,7 +131,12 @@ def four(input1, input2):
 	# The random module contains a function called randint.
 
 def five():
-    return []
+	import random
+	randomlist = []
+	for i in range (0,5):
+		n = random.randint(100,200)
+		randomlist.append(n)
+		print (randomlist)
 
 	# <QUESTION 6>
 
@@ -130,7 +155,10 @@ def five():
 	# There are no hints for this question.
     
 def six(input):
-	return False
+	if input.endswith("py"):
+		return True
+	else:
+		return False
 
 	# <QUESTION 7>
 
