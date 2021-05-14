@@ -30,14 +30,12 @@
 	# How does a for loop iterate through a string?
 
 def one(input):
-	j = len(input)
-	i = 0 
-	res=[]
-	while i<j:
-		res.append(input[i]*3)
-		i = i+1
-	result ="".join(res)
-	print(result)
+	word = []
+	for i in input:
+		word.append(i)
+		word.append(i)
+		word.append(i)
+	return "".join(word)
 
 
 	# <QUESTION 2>
@@ -56,15 +54,15 @@ def one(input):
 	# Use your CLI to access the Python documentation and get help manipulating strings - help(range).
 
 def two(input):
-	if input > 1:
-		for i in range(2,input):
-			if (input % i) == 0:
+	if input == 1:
+		return True
+	elif input == 2:
+		return True
+	elif input > 1:
+		for i in range (2,input):
+			if input % i == 0:
 				return False
-				break
-		else:
-			return True
-	return False
-
+	return True 
 	# <QUESTION 3>
 
     # Write a function which takes an integer input, a, and returns the sum a+aa+aaa+aaaa.
@@ -80,12 +78,11 @@ def two(input):
 	# What happens if you multiply a string by a number?
 
 def three(a):
-	x = int(a)
-	xx = int(a,a)
-	xxx = int(a,a,a)
-	xxxx = int(a,a,a,a)
-	ans = x + xx + xxx + xxxx
-	return ans
+	b = int(str(a)+str(a))
+	c = int(str(a)+str(a)+str(a))
+	d = int(str(a)+str(a)+str(a)+str(a))
+	return a + b + c + d
+
 
 	# <QUESTION 4>
 
@@ -155,10 +152,9 @@ def five():
 	# There are no hints for this question.
     
 def six(input):
-	if input.endswith("py"):
-		return True
-	else:
-		return False
+	result = input.lower().endswith('py')
+	return result
+
 
 	# <QUESTION 7>
 
